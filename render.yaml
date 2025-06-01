@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: ca-mitra-bot
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python3 main.py"
+    plan: free
+    envVars:
+      - key: BOT_TOKEN
+        value: your_bot_token_here
+      - key: API_ID
+        value: your_api_id_here
+      - key: API_HASH
+        value: your_api_hash_here
+      - key: LOG_CHANNEL_ID
+        value: "-1001234567890"
+      - key: UPDATE_CHANNEL_ID
+        value: "-1009876543210"
+      - key: PUBLIC_CHANNEL_USERNAME
+        value: "@camitra"
+      - key: ADMINS
+        value: "123456789"
+      - key: TIP_TIMINGS
+        value: "10:00,23:00"
