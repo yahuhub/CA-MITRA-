@@ -51,8 +51,7 @@ async def edit_tip_handler(event):
     else:
         tips.append(new_tip)
     await save_tips(tips)
-    await event.reply(f"Tip updated to:
-{new_tip}")
+    await event.reply(f"Tip updated to {new_tip}")
     await client.send_message(LOG_CHANNEL_ID, f"Tip edited by admin: {new_tip}")
 
 async def daily_tip_scheduler():
